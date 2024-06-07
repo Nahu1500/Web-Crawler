@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "My Web Crawler";
+}
+
+<h2>My Web Crawler</h2>
+
+<div id="content">
+    @if (ViewBag.ingresoPost)
+    {
+        if (ViewBag.KeyWords == null)
+        {
+            <p>El producto no posee descripcion o no se logro acceder a la url ingresada</p>
+        }
+        else
+        {
+            <p>KeyWords: <span id="KeyWords">@ViewBag.KeyWords</span></p>
+        }
+    }
+    else
+    {
+        <p>Servidor Web Crawler ejecutandose y esperando solicitudes POST!</p>
+    }
+</div>
